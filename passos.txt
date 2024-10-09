@@ -3,4 +3,4 @@ toda vez que abrir o projeto novamente:
 
 cd estudos-angular // para entrar na pasta 
 
-ng serve // para executar e abrir a porta e link do projeto
+ng serve // para executar e abrir a porta e link do projetong 
