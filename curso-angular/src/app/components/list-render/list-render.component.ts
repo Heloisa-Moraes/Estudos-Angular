@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { Animal } from '../../Animal';
 
+import { ListService } from '../../list.service';
+
 @Component({
   selector: 'app-list-render',
   standalone: true,
@@ -19,19 +21,18 @@ export class ListRenderComponent implements OnInit {
     {name: 'Bob', type: 'Horse', age: 1},
   ];
 
-   animal: Animal = {
-    name: 'Teste',
-    type: 'Alguma coisa',
-    age: 10,
-   };
-
-   animalDetails = ''
+    animalDetails = '';
   
-  constructor(){}
+  constructor(private listService: ListService){}
 
   ngOnInit(): void {}
 
-  showAge(animal: Animal) {
+  showAge(animal: Animal): void {
     this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`;
+  }
+
+  removeAnimal(animal: Animal): void {
+    console.log('Removendo animal...');
+    this.animals = this.listService.remove(this.animals,animal);
   }
 }

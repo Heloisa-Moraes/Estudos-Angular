@@ -12,6 +12,7 @@ import { EmitterComponent } from './components/emitter/emitter.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBlindingComponent } from './components/two-way-blinding/two-way-blinding.component';
+import { ListService } from './list.service';
 
 @Component({
   selector: 'app-root',
